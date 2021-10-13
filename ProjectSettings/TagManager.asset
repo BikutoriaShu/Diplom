@@ -62,3 +62,6 @@ TagManager:
   - name: PauseMenu
     uniqueID: 1400818855
     locked: 0
+  - name: ComplitedMenu
+    uniqueID: 2083809919
+    locked: 0

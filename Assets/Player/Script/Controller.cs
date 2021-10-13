@@ -17,6 +17,7 @@ public class Controller : MonoBehaviour
     public int cherry = 0;
     public bool cherryAp = false;
     public float timeleft = 10f;
+    public GameObject finishCanvas;
 
     void Start()
     {
@@ -71,6 +72,9 @@ public class Controller : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other) 
     {
+        if (other.tag =="PORTAL") {
+            finishCanvas.SetActive(true);
+        }
         if (other.name =="GroundAktiv"|| other.name == "Blocks") 
         {
             canJump = true;
