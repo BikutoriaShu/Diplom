@@ -5,8 +5,6 @@ using UnityEngine;
 public class CherryCont : MonoBehaviour
 {
     private void OnDestroy(){
-       // GameObject scoreCounter = GameObject.Find("ScoreGem");
-        //Score score = scoreCounter.GetComponent<Score>();
-        
+        Score.cherry++;
     }
 }

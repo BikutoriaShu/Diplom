@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class ComplitedMenu : MonoBehaviour
 
 {
@@ -40,5 +40,13 @@ public class ComplitedMenu : MonoBehaviour
                 }
             }
         }
+    }
+    public void Next ()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Menu Lvl");
+    }
+    public void Menu ()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Menu");
     }
 }

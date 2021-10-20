@@ -16,7 +16,7 @@ public class Controller : MonoBehaviour
     public int gems = 0;
     public int cherry = 0;
     public bool cherryAp = false;
-    public float timeleft = 10f;
+    public static float timeleft = 10f;
     public GameObject finishCanvas;
 
     void Start()
@@ -35,7 +35,9 @@ public class Controller : MonoBehaviour
         if(cherryAp){
          timeleft -= Time.deltaTime;
             if(timeleft < 0){
+                cherryAp = false;
                 jumpForce = 8f;
+                GameObject.Find("CanvasPause").transform.Find("ImageCherry").gameObject.SetActive(false);
             }
         }
     }
@@ -83,7 +85,8 @@ public class Controller : MonoBehaviour
         }
         if(other.tag == "Gem")
         {
-            gems++;
+            Score.gems++;
+            Score.gemsfinish++;
             Destroy(other.gameObject);
         }
         if(other.tag == "cherry")
@@ -91,6 +94,8 @@ public class Controller : MonoBehaviour
             jumpForce = 10f;
             Destroy(other.gameObject);
             cherryAp = true;
+            timeleft = 10;
+            GameObject.Find("CanvasPause").transform.Find("ImageCherry").gameObject.SetActive(true);
         }
     }   
 
