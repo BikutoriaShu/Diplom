@@ -18,10 +18,14 @@ public class Controller : MonoBehaviour
     public bool cherryAp = false;
     public static float timeleft = 10f;
     public GameObject finishCanvas;
+    public int hearts = 3;
 
     void Start()
     {
         
+    }
+    void HeartLoss(int x) {
+        hearts-=x;
     }
     private void Update() 
     {
@@ -96,6 +100,9 @@ public class Controller : MonoBehaviour
             cherryAp = true;
             timeleft = 10;
             GameObject.Find("CanvasPause").transform.Find("ImageCherry").gameObject.SetActive(true);
+        }
+        if (other.tag=="PossumJaw") {
+            HeartLoss(1);
         }
     }   
 
