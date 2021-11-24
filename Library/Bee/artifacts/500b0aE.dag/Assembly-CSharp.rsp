@@ -333,6 +333,7 @@
 -r:"Library/Bee/artifacts/500b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/Enemy/Opossum/OpossumControl.cs"
 "Assets/Enemy/Opossum/possumDeath.cs"
+"Assets/Hearts/HPscript.cs"
 "Assets/Items/cherry/CherryCont.cs"
 "Assets/Items/Gem/Prefab/gemController.cs"
 "Assets/Items/Gem/Score.cs"
