@@ -35,9 +35,6 @@ public class HPscript : MonoBehaviour
             heart2.sprite =sprEmpty;
             heart1.sprite =sprFull;
          break;
-         
- 
-     }
- }
-
+        }
+    }
 }
